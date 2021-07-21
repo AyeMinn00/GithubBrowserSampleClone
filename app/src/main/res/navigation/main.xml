@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.amo.githubbrowsersamplev2.ui.search.SearchFragment"
+        android:label="SearchFragment">
+        <action
+            android:id="@+id/showRepo"
+            app:destination="@id/repoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repoFragment"
+        android:name="com.amo.githubbrowsersamplev2.ui.repo.RepoFragment"
+        android:label="RepoFragment">
+        <argument
+            android:name="owner"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <!--    -->
+    <!--    <fragment-->
+    <!--        android:id="@+id/userFragment"-->
+    <!--        android:name="com.android.example.github.ui.user.UserFragment"-->
+    <!--        android:label="UserFragment" >-->
+    <!--        <argument-->
+    <!--            android:name="login"-->
+    <!--            app:argType="string"/>-->
+    <!--        <argument-->
+    <!--            android:name="avatarUrl"-->
+    <!--            android:defaultValue="@null"-->
+    <!--            app:argType="string"-->
+    <!--            app:nullable="true" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/showRepo"-->
+    <!--            app:destination="@id/repoFragment" />-->
+    <!--    </fragment>-->
+
+</navigation>
